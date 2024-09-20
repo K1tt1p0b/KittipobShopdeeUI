@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#B3E5FC"
+            android:endColor="#81D4FA"
+            android:angle="90"/>
+            <corners android:radius="16dp" /> <!-- ความโค้งมุม -->
+        </shape>
+    </item>
+</layer-list>

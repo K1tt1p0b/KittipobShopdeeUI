@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/button_cart"> <!-- สีพื้นหลังขาวอมเทา -->
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/button_cart"
+        android:gravity="center"> <!-- สีพื้นหลังขาวอมเทา -->
+
+        <!-- Product Image in CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <ImageView
+                android:id="@+id/imageViewFile"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Product Name and Price -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="16dp"> <!-- เพิ่ม margin ด้านบน -->
+
+            <TextView
+                android:id="@+id/txtProductName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="กางเกงขายาว"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="@drawable/gradient_background"
+                android:elevation="2dp"
+                android:padding="8dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$200"
+                android:textSize="22sp"
+                android:textColor="#FF0000"
+                android:background="@drawable/button_cart"
+                android:elevation="2dp"
+                android:padding="8dp"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <!-- Product Details -->
+        <TextView
+            android:id="@+id/txtProductDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="สีขาว ผ้ายืด ขนาด M"
+            android:textSize="18sp"
+            android:textColor="#020202"
+            android:padding="12dp"
+            android:background="@drawable/gradient_background"
+            android:elevation="2dp"
+            android:gravity="center" />
+
+        <!-- Quantity Adjustments -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"
+            android:background="@drawable/gradient_background">
+
+            <Button
+                android:id="@+id/btnRemoveProduct"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#FF5252"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:text="-" />
+
+            <EditText
+                android:id="@+id/editQuantity"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@null"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <Button
+                android:id="@+id/btnAddProduct"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:text="+" />
+        </LinearLayout>
+
+        <!-- Add to Cart Button -->
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="เพิ่มไปยังตะกร้า"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:elevation="4dp"
+            android:background="@drawable/button_cart"/>
+
+    </LinearLayout>
+</ScrollView>
